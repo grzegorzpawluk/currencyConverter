@@ -1,25 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import CurrencyConverter from './components/CurrencyConverter';
+
+const API_ACCESS_KEY = 'dd8b9c2acf0a67c4256acdd01dfd21ad';
+// const API_ACCESS_KEY = '';
+const BASE_CURRENCY_URL = `http://api.exchangeratesapi.io/v1/latest?access_key=${API_ACCESS_KEY}`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <CurrencyConverter BASE_CURRENCY_URL={BASE_CURRENCY_URL} />;
 }
 
 export default App;
